@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+## Picojump: A system for migrating computation to resources
 
-You can use the [editor on GitHub](https://github.com/cnnrznn/Picojump/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+![Picojump diagram](images/picojump.png)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Abstract
 
-### Markdown
+Computing resources are increasingly distributed, creating challenges for programmers and users.  Programmers are faced with the challenge of implementing distributed applications, and users of legacy applications must either co-locate all of the resources or divide the application into tasks that can be executed independently on different hosts.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+This paper presents PicoJump, a system that enables legacy applications to execute when their resources are distributed amongst different operating systems.  At runtime, PicoJump interposes on resource access to make remote access transparent.  As well, PicoJump monitors application behavior and migrates the application in order to minimize the amount of remote accesses.  PicoJump leverages prior work in live migration to make migrating applications between hosts fast and efficient.  Our evaluation of a prototype implementation of PicoJump demonstrates that it is feasible and sufficiently performant on multiple real-world applications.
 
-```markdown
-Syntax highlighted code block
+### The First Distributed Migration
 
-# Header 1
-## Header 2
-### Header 3
+Picojump is the first process migration system to boast a distributed migration approach. Traditional approaches only consider process migration between two machines: a source and a destination. Picojump is able to quickly migrate an application within a cluster by enabling _partial migration_. That is, the job scheduler does not move the entire process data at each migration. This makes migration fast.
 
-- Bulleted
-- List
+Picojump uses a new migration algorithm that is a hybrid of the two state-of-the-art live migration approaches: Pre-copy and Post-copy. Like Pre-copy, Picojump restores and application with any state that is clean in the destination machine's cache. Like Post-copy, Picojump pulls dirty resources lazily from the nearest remote machine.
 
-1. Numbered
-2. List
+### Transparent Resource Distribution
 
-**Bold** and _Italic_ and `Code` text
+The brains of Picojump, the 'Manager', is an interposition layer between the process and the underlying operating systems. Through the manager, applications running on Picojump are unaware of whether or not the resource they request is remote or local. It simply works. The manager is able to capture accesses to remote resources in RPC's, and act as a cheap pass-through when resources are local.
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/cnnrznn/Picojump/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Use Cases
