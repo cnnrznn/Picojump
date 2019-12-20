@@ -1,8 +1,3 @@
----
-title: Picojump
-subtitle: Migrating processes to resources
----
-
 ## Picojump: A system for migrating computation to resources
 
 ![Picojump diagram](images/picojump.png)
