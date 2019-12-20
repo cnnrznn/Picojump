@@ -1,3 +1,8 @@
+---
+title: Picojump
+subtitle:
+---
+
 ## Picojump: A system for migrating computation to resources
 
 ![Picojump diagram](images/picojump.png)
