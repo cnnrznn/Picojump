@@ -4,6 +4,14 @@
 
 ![This is a cluster](images/cluster.png)
 
+Today's clusters are heterogeneous collections of machines. Datacenters are
+compiled of database servers, compute servers, servers with high memory, and
+gpu-enabled machines. These servers exist connected to a high speed network and
+are built to meet different application needs.
+
+What do you do if you want your application to take advantage of all of these
+resources, transparently?
+
 ### Abstract
 
 Computing resources are increasingly distributed, creating challenges for programmers and users.  Programmers are faced with the challenge of implementing distributed applications, and users of legacy applications must either co-locate all of the resources or divide the application into tasks that can be executed independently on different hosts.
