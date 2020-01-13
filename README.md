@@ -1,6 +1,4 @@
-## Picojump: A system for migrating computation to resources
-
-![Picojump diagram](images/picojump.png)
+<!-- ![Picojump diagram](images/picojump.png) -->
 
 ### Abstract
 
