@@ -17,3 +17,7 @@ Picojump uses a new migration algorithm that is a hybrid of the two state-of-the
 The brains of Picojump, the 'Manager', is an interposition layer between the process and the underlying operating systems. Through the manager, applications running on Picojump are unaware of whether or not the resource they request is remote or local. It simply works. The manager is able to capture accesses to remote resources in RPC's, and act as a cheap pass-through when resources are local.
 
 ### Use Cases
+- Load balancing
+- NFS access
+- Dynamic scaling (cloud pricing)
+- Policy-driven resource access
