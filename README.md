@@ -30,9 +30,7 @@ between hosts fast and efficient.  Our evaluation of a prototype implementation
 of PicoJump demonstrates that it is feasible and sufficiently performant on
 multiple real-world applications.
 
-### The First Distributed Migration
-
-#### A brief history of process migration
+### A brief history of process migration
 Process migration first appeared in the 80s as a way of moving running processes
 within unix clusters. With the birth of virtual machines, traditional process
 migration techniques had to be improved as the memory of a virtual machine is
@@ -42,7 +40,7 @@ _downtime_, or the time when the process is paused during migration. These two
 techniques are _pre-copy_ and _post-copy_ live migration. Picojump takes
 advantage of characterstics from both techniques.
 
-#### The Picojump approach
+### The First Distributed Migration
 Picojump is the first process migration system to boast a distributed migration
 approach. Traditional approaches only consider process migration between two
 machines: a source and a destination. Picojump is able to quickly migrate an
