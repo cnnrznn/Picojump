@@ -2,7 +2,7 @@
 
 ### Problem
 
-![This is a cluster](images/arch.png)
+![This is a cluster](images/cluster.png)
 
 ### Abstract
 
