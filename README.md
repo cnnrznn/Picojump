@@ -1,5 +1,9 @@
 <!-- ![Picojump diagram](images/picojump.png) -->
 
+### Problem
+
+![This is a cluster](images/arch.png)
+
 ### Abstract
 
 Computing resources are increasingly distributed, creating challenges for programmers and users.  Programmers are faced with the challenge of implementing distributed applications, and users of legacy applications must either co-locate all of the resources or divide the application into tasks that can be executed independently on different hosts.
