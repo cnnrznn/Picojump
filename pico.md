@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /pico
+title: Picojump
 ---
 
 <!-- ![Picojump diagram](images/picojump.png) -->
