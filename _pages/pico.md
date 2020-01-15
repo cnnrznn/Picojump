@@ -1,3 +1,7 @@
+---
+permalink: /picocenter/
+---
+
 <!-- ![Picojump diagram](images/picojump.png) -->
 
 ### Problem
