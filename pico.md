@@ -74,6 +74,3 @@ local.
 - NFS access
 - Dynamic scaling (cloud pricing)
 - Policy-driven resource access
-
-### Acknowledgement
-The authors are sponsored by NSF grant #<...>
