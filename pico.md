@@ -1,6 +1,5 @@
 ---
 layout: default
-permalink: /pico
 ---
 
 <!-- ![Picojump diagram](images/picojump.png) -->
